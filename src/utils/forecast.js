@@ -8,7 +8,7 @@ const forecast = (longitude, latitude, callback) => {
         } else if (body.error) {
             callback('unable to retrieve data', undefined)
         } else {
-            callback(undefined, 'Weather Condition: ' + body.current.weather_descriptions[0] + ', Temperature: ' + body.current.temperature + ' degrees, Feels like: ' + body.current.feelslike + ' degrees, Rainfall: ' + body.current.precip + 'mm.')
+            callback(undefined, 'Weather Conditions: ' + body.current.weather_descriptions[0] + '. Temperature: ' + body.current.temperature + ' degrees, Feels like: ' + body.current.feelslike + ' degrees, Rainfall: ' + body.current.precip + 'mm, Humidity: ' + body.current.humidity + '%')
         }
     })
 }
