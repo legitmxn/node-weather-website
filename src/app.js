@@ -6,6 +6,7 @@ const express = require('express')
 const hbs = require('hbs')
 // const { query } = require('express')
 
+const port = process.env.PORT || 3000
 const app = express()
 
 // define paths for Express config
@@ -112,8 +113,8 @@ app.get('*',(req,res)=>{
 // app.com/about
 
 
-app.listen(3000, () => {
-    console.log("\nExpress is running, Server is up at port 3000")
+app.listen(port, () => {
+    console.log("\nExpress is running, Server is up at port "+port)
 })
 
 
